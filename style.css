@@ -69,6 +69,44 @@ border: none;
 transition: 1s;
 }
 
+#viewAll{
+    margin-right: 20px;
+    width:30px;
+}
+
+#viewAll:hover{
+    transform: scale(1.2);
+}
+
+#tooltip{
+    font-size: 15px;
+    margin-right:20px;
+    background-color: var(--theme-white);
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    width:0px;
+    height:15px;
+    opacity:0;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    
+}
+
+
+#tooltip::after{
+    content:'';
+    display:block;
+    width:0;
+    height:0;
+    position:absolute;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent; 
+    border-left:8px solid var(--theme-white);
+    right:-8px;
+    top:10px;
+}
+
 /* main */
 
 #main{

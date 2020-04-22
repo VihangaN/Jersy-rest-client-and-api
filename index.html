@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helthcare Client</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mdb.css">
+    <script src="jquery.js"></script>
+    <script src="main.js"></script>
+    <script src="mdb.js"></script>
+
+</head>
+<body>
+    <div id="navbar">
+        <div class="title">
+            Healthcare
+        </div>
+        <div class="toggle">
+            <button value ="1" class="active" id="staffType">Medical staff</button>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="submenu">
+            <div id="options">
+                <p>Show data for <span id="type">Medical </span>staff</p>
+                <button>Add member</button>
+                <input type="search" name="" id="search" placeholder="Search ...">
+            </div>
+        </div>
+        <div id="table">
+            
+            <table id="data">
+            <thead>
+                <tr> 
+                  <th >#Id</th>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Sallary</th>
+                  <th>Profile img</th>
+                  <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+           <tr class="no_result">
+               <td colspan="6"> No records found</td>
+           </tr>
+            </tbody>
+              </table>
+              <img src="./assets/loading.gif" alt="" id="loader">
+              
+        </div>
+    </div>
+  
+  
+   
+</body>
+</html>

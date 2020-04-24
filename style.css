@@ -97,7 +97,7 @@ svg{
     height:50px;
 }
 #progress{
-   
+   stroke-linecap: round;
     stroke: none;
 }
 
@@ -157,7 +157,7 @@ svg{
 
 #search{
     height:40px;
-    margin:0px 100px 0px auto;
+    margin:0px 40px 0px auto;
     padding:15px;
     background-color: var(--theme-gray);
     border:none;
@@ -173,7 +173,49 @@ svg{
     font-style: normal;
     transition: 1s;
 }
-    
+
+
+#info{
+    position: absolute;
+    display: inline;
+    align-items: center;
+    justify-content: center;
+    font-size:12px;
+    margin: 20px 40px;
+}
+
+#info li{
+    list-style: none;
+    float: left;
+    margin-left: 20px;
+
+}
+
+#info li:nth-child(1)::before{
+    content: "";
+    padding: 0px 10px 0px 10px;
+    margin-right: 10px;
+    background-color: var(--theme-gray);
+    border-radius: 3px;
+}
+
+#info li:nth-child(2)::before{
+    content: "";
+    padding: 0px 10px 0px 10px;
+    margin-right: 10px;
+    background-color: var(--theme-blue);
+    border-radius: 3px;
+}
+
+#info li:nth-child(3)::before{
+    content: "";
+    padding: 0px 10px 0px 10px;
+    margin-right: 10px;
+    background-color: var(--theme-orange);
+    border-radius: 3px;
+}
+
+
 
 /* table */
 

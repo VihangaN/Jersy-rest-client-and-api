@@ -11,7 +11,7 @@ $('document').ready(() => {
     const btn = $("#staffType");
     const typetext = $("#type");
     const modal = $("#modal");
-    let memberCount = 0;
+    let memberCount = 60;
     let med = 0;
     let non =0;
     
@@ -85,8 +85,8 @@ medical= ()=>{
           med=med+1;
         });
 
-        progress("med",18,memberCount);
-        pcount(18);
+        progress("med",60,memberCount);
+        pcount(60);
         med=0;
     }
   });
@@ -218,7 +218,7 @@ $.ajax({
           
           `);
     
-          memberCount = data.data.length;
+          // memberCount = data.data.length;
           console.log(memberCount);
          
       });
@@ -265,13 +265,24 @@ $('#search').keyup(function(){
   
 })
 
+
+//test
+
+$("#modal").click(function(){
+  $(this).css({'display':'none'},600);
+ 
+ table.show()
+
+})
+
 //  event listners for modal
 
 
-
+const table = $("#table");
 
 $("#data").on('click','#edit',(function() {
-  const id = $(this).closest("tr").find("#id").text();   
+  const id = $(this).closest("tr").find("#id").text();
+  table.hide();
   popup('edit',id);
 }));
 

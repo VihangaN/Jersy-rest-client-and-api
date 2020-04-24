@@ -18,7 +18,9 @@
         </div>
         <div class="toggle">
             <span id="tooltip">View all staff members</span>
+          
             <img src="./assets/viewall.svg" alt="" id="viewAll">
+           
             <button value ="1" class="active" id="staffType">Medical staff</button>
         </div>
     </div>
@@ -26,8 +28,15 @@
     <div id="main">
         <div id="submenu">
             <div id="options">
-                <p>Show data for <span id="type">Medical </span>staff</p>
-                <button>Add member</button>
+                <p>Show data for <span id="type">Medical </span>staff </p> 
+                <button id="addMember">Add member</button>
+                <div class="progress">
+                    <svg viewBox="0 0 120 120">
+                        <circle cx="60" cy="60" r="54" fill="none" stroke="#e6e6e6" stroke-width="12" />
+                        <text  x="50%" y="50%" r=54 dominant-baseline="middle" text-anchor="middle" id="progress_count">20</text>
+                        <circle id="progress" cx="60" cy="60" r="54" fill="none" stroke="#f77a52" stroke-width="12" stroke-dasharray="339.292" stroke-dashoffset="0" />
+                    </svg>
+                </div>
                 <input type="search" name="" id="search" placeholder="Search ...">
             </div>
         </div>
@@ -35,7 +44,7 @@
             
             <table id="data">
             <thead>
-                <tr> 
+                <tr id="header"> 
                   <th >#Id</th>
                   <th>Name</th>
                   <th>Age</th>
@@ -45,6 +54,9 @@
                 </tr>
             </thead>
             <tbody>
+               <tr>
+                   <td></td>
+               </tr>
            <tr class="no_result">
                <td colspan="6"> No records found</td>
            </tr>
@@ -52,6 +64,13 @@
               </table>
               <img src="./assets/loading.gif" alt="" id="loader">
               
+        </div>
+      
+        <div id="modal">
+            <span id="mtitle"></span>
+            <input type="text" name="name" id="name">
+            <input type="email" name="" id="">
+            <input type="number" name="" id="">
         </div>
     </div>
   

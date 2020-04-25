@@ -5,18 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helthcare Client</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mdb.css">
     <script src="jquery.js"></script>
     <script src="main.js"></script>
-    <script src="mdb.js"></script>
-
 </head>
 <body>
+    <div id="overlay"></div>
     <div id="navbar">
         <div class="title">
             Healthcare
         </div>
         <div class="toggle">
+
+            <img src="./assets/dark.svg" alt="" id="switch">
+
             <span id="tooltip">View all staff members</span>
           
             <img src="./assets/viewall.svg" alt="" id="viewAll">
@@ -26,6 +27,7 @@
     </div>
 
     <div id="main">
+        
         <div id="submenu">
             <div id="options">
                 <p>Show data for <span id="type">Medical </span>staff </p> 

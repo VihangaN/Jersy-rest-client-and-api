@@ -11,7 +11,7 @@ $('document').ready(() => {
     const btn = $("#staffType");
     const typetext = $("#type");
     const modal = $("#modal");
-    let memberCount = 60;
+    let memberCount = 24;
     let med = 0;
     let non =0;
     
@@ -85,8 +85,8 @@ medical= ()=>{
           med=med+1;
         });
 
-        progress("med",60,memberCount);
-        pcount(60);
+        progress("med",18,memberCount);
+        pcount(18);
         med=0;
     }
   });
@@ -274,6 +274,34 @@ $("#modal").click(function(){
  table.show()
 
 })
+
+// theme swithcher
+
+let theme = "light";
+
+$("#switch").click(()=>{
+ 
+  if(theme=="light"){
+    blur();
+    $('link[href="style.css"]').attr('href','dark.css');
+    $("#switch").attr('src','./assets/light.svg');
+    $("#progress_count").css({"fill":"#969292"});
+    theme = "dark";
+  }
+  else{
+    blur();
+    $('link[href="dark.css"]').attr('href','style.css');
+    $("#switch").attr('src','./assets/dark.svg');
+    theme = "light";
+  }
+  
+})
+
+let blur = ()=>{
+  $("body").addClass("blur").delay(1000).queue(()=>{
+    $("body").removeClass('blur').dequeue();
+  });
+}
 
 //  event listners for modal
 

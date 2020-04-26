@@ -247,7 +247,7 @@ $(document).ajaxStop(()=> {
 $('.no_result').hide();
 $('#search').keyup(function(){
  
-  var search = $(this).val();
+  let search = $(this).val();
 
   
   $('table tbody tr').hide();
@@ -263,6 +263,20 @@ $('#search').keyup(function(){
      $('.no_result').show();
   }
   
+})
+
+$("#search").blur(function(){
+  let search = $(this).val();
+
+  if(search == ""){
+    $('table tbody tr').show();
+    $('.no_result').hide();
+  
+  }
+  else{
+ 
+  }
+ 
 })
 
 

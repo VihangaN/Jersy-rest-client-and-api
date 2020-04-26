@@ -291,6 +291,22 @@ $("#modal").click(function(){
 
 // theme swithcher
 
+
+
+// Get default theme from l.s
+const isDark = localStorage.getItem('isDark');
+if(isDark=='true'){
+  $('link[href="style.css"]').attr('href','dark.css');
+  $("#switch").attr('src','./assets/light.svg');
+  $("#progress_count").css({"fill":"#969292"});
+}
+else{
+  $('link[href="dark.css"]').attr('href','style.css');
+  $("#switch").attr('src','./assets/dark.svg');
+}
+
+// theme toggle
+
 let theme = "light";
 
 $("#switch").click(()=>{
@@ -300,12 +316,14 @@ $("#switch").click(()=>{
     $('link[href="style.css"]').attr('href','dark.css');
     $("#switch").attr('src','./assets/light.svg');
     $("#progress_count").css({"fill":"#969292"});
+    localStorage.setItem('isDark',"true");
     theme = "dark";
   }
   else{
     blur();
     $('link[href="dark.css"]').attr('href','style.css');
     $("#switch").attr('src','./assets/dark.svg');
+    localStorage.setItem('isDark',"false");
     theme = "light";
   }
   

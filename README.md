@@ -1,11 +1,25 @@
-#  Client for Jersy Restful API
+# Client for Jersy Restful API ( Darkmode included )
 
-##### HTML - Pure CSS - Jqury- AJAX 
+  
 
-###### - SLIIT 3rd Year - PAF
+#### HTML - Pure CSS - Jqury- AJAX
+
+##### - SLIIT 3rd Year - PAF project
 
 &nbsp;
 
-![Preview](https://repository-images.githubusercontent.com/257853175/b779f880-84c1-11ea-9d48-8b89c283a16b)
-
  
+
+###### - Light Mode
+
+  
+
+![Preview - light mode](https://drive.google.com/uc?export=view&id=1kgn5SMQj8vLsIpXbXc3FPt77wnuaCaGk)
+
+  
+
+###### - Dark Mode
+
+  
+
+![Preview - Dark mode](https://drive.google.com/uc?export=view&id=1IWw61P-xcKLFKs4KnWeuS7pGKk2cxWlE)

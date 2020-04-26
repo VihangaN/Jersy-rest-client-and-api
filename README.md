@@ -14,7 +14,7 @@
 
   
 
-![Preview - light mode](https://drive.google.com/uc?export=view&id=1kgn5SMQj8vLsIpXbXc3FPt77wnuaCaGk)
+![Preview - light mode](https://raw.githubusercontent.com/VihangaN/Jersy-rest-client/master/ui%20snap/Screenshot%202020-04-26%20at%2017.46.28.png)
 
   
 
@@ -22,4 +22,4 @@
 
   
 
-![Preview - Dark mode](https://drive.google.com/uc?export=view&id=1IWw61P-xcKLFKs4KnWeuS7pGKk2cxWlE)
+![Preview - Dark mode](https://raw.githubusercontent.com/VihangaN/Jersy-rest-client/master/ui%20snap/Screenshot%202020-04-26%20at%2017.46.45.png)

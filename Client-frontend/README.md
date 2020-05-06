@@ -1,4 +1,4 @@
-# Client for Jersy Restful API ( Darkmode included ) + ( upadted ) API folder also added
+# Client for Jersy Restful API ( Darkmode included ) + ( update ) API folder also added
 
   
 

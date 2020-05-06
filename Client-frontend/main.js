@@ -8,7 +8,7 @@ $('document').ready(() => {
   // employee object
 
   let emdata = {
-    eId:"", 
+    eId: "",
     address: "",
     age: 0,
     email: "",
@@ -84,7 +84,7 @@ $('document').ready(() => {
 
     $.ajax({
       type: 'GET',
-      url: 'http://192.168.1.103:8080/Healthcare/webapi/staff',
+      url: 'http://127.0.0.1:8080/Healthcare/webapi/staff',
       data: { get_param: 'value' },
       dataType: 'json',
       success: (data) => {
@@ -139,7 +139,7 @@ $('document').ready(() => {
 
     $.ajax({
       type: 'GET',
-      url: 'http://192.168.1.103:8080/Healthcare/webapi/staff',
+      url: 'http://127.0.0.1:8080/Healthcare/webapi/staff',
       data: { get_param: 'value' },
       dataType: 'json',
       success: (data) => {
@@ -195,7 +195,7 @@ $('document').ready(() => {
     $('#data').find('tbody').empty();
     $.ajax({
       type: 'GET',
-      url: 'http://192.168.1.103:8080/Healthcare/webapi/staff',
+      url: 'http://127.0.0.1:8080/Healthcare/webapi/staff',
       data: { get_param: 'value' },
       dataType: 'json',
       success: (data) => {
@@ -236,7 +236,7 @@ $('document').ready(() => {
 
   $.ajax({
     type: 'GET',
-    url: 'http://192.168.1.103:8080/Healthcare/webapi/staff',
+    url: 'http://127.0.0.1:8080/Healthcare/webapi/staff',
     data: { get_param: 'value' },
     dataType: 'json',
     success: (data) => {
@@ -274,77 +274,77 @@ $('document').ready(() => {
   });
 
 
- // ----------------------------------------- POST method -------------------------------
+  // ----------------------------------------- POST method -------------------------------
 
 
-addmember = ()=>{
+  addmember = () => {
 
-  $.ajax({
-    type: 'POST',
-    headers: { 
-      'Accept': 'application/json',
-      'Content-Type': 'application/json' 
-  },
-    url: 'http://192.168.1.103:8080/Healthcare/webapi/staff/add',
-    data: JSON.stringify(emdata),
-    dataType: 'json',
-    success: (data) => {
-      console.log(data);
-      refresh();
+    $.ajax({
+      type: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      url: 'http://127.0.0.1:8080/Healthcare/webapi/staff/add',
+      data: JSON.stringify(emdata),
+      dataType: 'json',
+      success: (data) => {
+        console.log(data);
+        refresh();
 
-    }
-  });
-  
-}
+      }
+    });
 
-
-
-//-------------------------------------------- DELETE method -----------------------------
+  }
 
 
-deletemember = ()=>{
 
-  $.ajax({
-    type: 'DELETE',
-    headers: { 
-      'Accept': 'application/json',
-      'Content-Type': 'application/json' 
-  },
-    url: 'http://192.168.1.103:8080/Healthcare/webapi/staff/'+emdata.eId ,
-    data: JSON.stringify(emdata),
-    dataType: 'json',
-    success: (data) => {
-      console.log(data);
-      refresh();
-    }
-  });
-  
-}
+  //-------------------------------------------- DELETE method -----------------------------
+
+
+  deletemember = () => {
+
+    $.ajax({
+      type: 'DELETE',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      url: 'http://127.0.0.1:8080/Healthcare/webapi/staff/' + emdata.eId,
+      data: JSON.stringify(emdata),
+      dataType: 'json',
+      success: (data) => {
+        console.log(data);
+        refresh();
+      }
+    });
+
+  }
 
 
   // ----------------------------------------- PUT method ----------------------------------
 
 
   updatemember = () => {
-    console.log(emdata.eId );
+    console.log(emdata.eId);
     $.ajax({
       type: 'PUT',
-      headers: {  
+      headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
-    },
-      url: 'http://192.168.1.103:8080/Healthcare/webapi/staff/update',
+      },
+      url: 'http://127.0.0.1:8080/Healthcare/webapi/staff/update',
       data: JSON.stringify(emdata),
       dataType: 'json',
       success: (data) => {
-        console.log("response"+data);
-  
+        console.log("response" + data);
+
       },
-      error:(err) =>{
+      error: (err) => {
         console.log(err);
         refresh();
       }
-      
+
     });
 
   }
@@ -404,7 +404,7 @@ deletemember = ()=>{
 
 
 
- 
+
 
   // -------------------------------- theme swithcher ---------------------------
 
@@ -466,7 +466,7 @@ deletemember = ()=>{
 
     // asign values to popup modal's form 
 
-    
+
     const name = $(this).closest("tr").find("#name").text();
     const age = $(this).closest("tr").find("#age").text();
     const gender = $(this).closest("tr").find("#gender").text();
@@ -482,17 +482,17 @@ deletemember = ()=>{
     $("#eAddress").val(address);
 
 
-    emdata.eId  = id; // add eid to employee object to update record
+    emdata.eId = id; // add eid to employee object to update record
     // table.hide();
     popup('edit', id);
-    console.log(emdata.eId );
-   
-  console.log("update" + emdata.eId );
+    console.log(emdata.eId);
+
+    console.log("update" + emdata.eId);
   }));
 
   $("#addMember").click(() => {
     popup('add');
-    emdata.eId  = null; // remove eid from employee object to auto increment eid
+    emdata.eId = null; // remove eid from employee object to auto increment eid
     console.log(emdata);
   })
 
@@ -500,12 +500,12 @@ deletemember = ()=>{
 
   $("#data").on('click', '#delete', (function () {
     const id = $(this).closest("tr").find("#id").text();
-    emdata.eId  = id; // add eid to employee object to update record
+    emdata.eId = id; // add eid to employee object to update record
     // table.hide();
-    alert(emdata.eId );
+    alert(emdata.eId);
     deletemember();
-   
-  console.log("delete" + emdata.eId );
+
+    console.log("delete" + emdata.eId);
   }));
 
 
@@ -524,7 +524,7 @@ deletemember = ()=>{
       modalTitle.text("Add new member");
       modal.fadeIn();
       $("#addbtn").text("Add member")
-      param_type =true; // set paramater type to true for post request
+      param_type = true; // set paramater type to true for post request
     }
 
 
@@ -532,7 +532,7 @@ deletemember = ()=>{
 
   // handle modal close
 
-  mclose = () =>{
+  mclose = () => {
     $(modal).css({ 'display': 'none' }, 600);
     table.show()
   }
@@ -574,27 +574,27 @@ deletemember = ()=>{
       emdata.type = emType;
 
       console.log(emdata);
-     
 
-      if(param_type == true){
+
+      if (param_type == true) {
         addmember();
         console.log(param_type);
 
         console.log(emdata);
       }
-      else if(param_type ==false){
+      else if (param_type == false) {
         updatemember();
         console.log(emdata);
         console.log(param_type);
       }
-      else{
+      else {
 
       }
-     
 
-      
 
-    }else{
+
+
+    } else {
       done = false;
     }
 
@@ -704,11 +704,11 @@ deletemember = ()=>{
     $("#progress_count").text(num);
   }
 
-// refresh page
+  // refresh page
 
-refresh = ()=>{
-  location.reload();
-}
+  refresh = () => {
+    location.reload();
+  }
 
 });
 

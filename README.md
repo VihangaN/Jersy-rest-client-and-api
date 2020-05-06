@@ -11,10 +11,10 @@
 
 ### I created the Client and API separately : steps to Run client and API
 
-* Client
+* Client :
        All the client source files are inside the client folder . can run the client by using index.html file 
 
- * API
+ * API :
  All the API source files inside the API folder , API can run by opening "Healthcare" Project in eclipse.
 
 

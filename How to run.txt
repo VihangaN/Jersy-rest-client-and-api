@@ -1,0 +1,8 @@
+I created the Client and API separately : steps to Run client and API
+
+
+Client :
+       All the client source files are inside the client folder . client can run  by using index.html file
+
+ API :
+      All the API source files inside the API folder , API can run by opening "Healthcare" Project in eclipse.

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <script src="jquery.js"></script>
     <script src="main.js"></script>
 </head>
+
 <body>
     <div id="overlay"></div>
     <div id="navbar">
@@ -19,24 +21,26 @@
             <img src="./assets/dark.svg" alt="" id="switch">
 
             <span id="tooltip">View all staff members</span>
-          
+
             <img src="./assets/viewall.svg" alt="" id="viewAll">
-           
-            <button value ="1" class="active" id="staffType">Medical staff</button>
+
+            <button value="1" class="active" id="staffType">Medical staff</button>
         </div>
     </div>
 
     <div id="main">
-        
+
         <div id="submenu">
             <div id="options">
-                <p>Show data for <span id="type">Medical </span>staff </p> 
+                <p>Show data for <span id="type">Medical </span>staff </p>
                 <button id="addMember">Add member</button>
                 <div class="progress">
                     <svg viewBox="0 0 120 120">
                         <circle cx="60" cy="60" r="54" fill="none" stroke="#e6e6e6" stroke-width="12" />
-                        <text  x="50%" y="50%" r=54 dominant-baseline="middle" text-anchor="middle" id="progress_count">20</text>
-                        <circle id="progress" cx="60" cy="60" r="54" fill="none" stroke="#f77a52" stroke-width="12" stroke-dasharray="339.292" stroke-dashoffset="0" />
+                        <text x="50%" y="50%" r=54 dominant-baseline="middle" text-anchor="middle"
+                            id="progress_count">20</text>
+                        <circle id="progress" cx="60" cy="60" r="54" fill="none" stroke="#f77a52" stroke-width="12"
+                            stroke-dasharray="339.292" stroke-dashoffset="0" />
                     </svg>
 
                     <div id="info">
@@ -49,40 +53,65 @@
             </div>
         </div>
         <div id="table">
-            
+
             <table id="data">
-            <thead>
-                <tr id="header"> 
-                  <th >#Id</th>
-                  <th>Name</th>
-                  <th>Age</th>
-                  <th>Sallary</th>
-                  <th>Profile img</th>
-                  <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-               <tr>
-                   <td></td>
-               </tr>
-           <tr class="no_result">
-               <td colspan="6"> No records found</td>
-           </tr>
-            </tbody>
-              </table>
-              <img src="./assets/loading.gif" alt="" id="loader">
-              
+                <thead>
+                    <tr id="header">
+                        <th>#Id</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Nic</th>
+                        <th>Email</th>
+                        <th>Address</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                    </tr>
+                    <tr class="no_result">
+                        <td colspan="6"> No records found</td>
+                    </tr>
+                </tbody>
+            </table>
+            <img src="./assets/loading.gif" alt="" id="loader">
+
         </div>
-      
+
         <div id="modal">
-            <span id="mtitle"></span>
-            <input type="text" name="name" id="name">
-            <input type="email" name="" id="">
-            <input type="number" name="" id="">
+            <div id="modalHead">
+                <span id="mtitle"></span><div class="close" onclick="mclose()">&times;</div>
+            </div>
+          
+
+            <form id="form" onsubmit="return submit(e)">
+                <input type="text" name="text" id="eName" required minlength="2" pattern="[A-Za-z]{}" title="Text only">
+                <input type="number" name="age" id="eAge" required minlength="2" min="18" max="50">
+                <select id="eGender" required>
+                    <option value="" selected disabled hidden>Select gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+                <br>
+                <input type="text" name="nic" id="eNic" required>
+                <input type="email" name="email" id="eEmail" required>
+                <select id="eType" required>
+                    <option value="" selected disabled hidden>Employee type</option>
+                    <option value="true">Medical</option>
+                    <option value="false">Non medical</option>
+                </select>
+                <br>
+                <textarea name="address" id="eAddress" cols="30" rows="10" required></textarea>
+                <br>
+                <button id="addbtn" type="submit" value="add member">Add member</button>
+            </form>
         </div>
     </div>
-  
-  
-   
+
+
+
 </body>
+
 </html>

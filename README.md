@@ -1,8 +1,8 @@
-# Client for Jersy Restful API ( Darkmode included )
+# Client for Jersy Restful API ( Darkmode included ) + ( upadted ) API folder also added
 
   
 
-#### HTML - Pure CSS - Jqury- AJAX
+#### HTML - Pure CSS - Jqury- AJAX - Jersey - Java
 
 ##### - SLIIT 3rd Year - PAF project
 
